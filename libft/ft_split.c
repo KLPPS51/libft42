@@ -6,7 +6,7 @@
 /*   By: mobullad <mobullad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:40:15 by mobullad          #+#    #+#             */
-/*   Updated: 2024/11/06 18:51:27 by mobullad         ###   ########.fr       */
+/*   Updated: 2024/11/07 12:21:28 by mobullad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,8 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	int		k;
 
+	if (!s)
+		return (NULL);
 	k = 0;
 	i = 0;
 	tab = malloc(sizeof(char *) * (ft_count_words(s, c) + 1));

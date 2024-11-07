@@ -38,7 +38,7 @@ bonus: $(BONUS_OBJS) $(OBJS)
  
 # Supprime les fichiers objets
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
   
 # Supprime les fichiers objets et la bibliothèque
 fclean: clean
