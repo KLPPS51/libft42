@@ -6,7 +6,7 @@
 /*   By: mobullad <mobullad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 13:09:41 by mobullad          #+#    #+#             */
-/*   Updated: 2024/10/30 17:32:11 by mobullad         ###   ########.fr       */
+/*   Updated: 2024/11/10 16:14:53 by mobullad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/*#include <stdio.h>
-
-int main (void)
-{
-	char str[]="A";
-	char str2[]="Z";
-
-	printf("%d\n", ft_memcmp(str, str2, 2));
-	return (0);
-}*/

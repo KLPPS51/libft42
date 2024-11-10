@@ -6,7 +6,7 @@
 /*   By: mobullad <mobullad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 19:02:20 by mobullad          #+#    #+#             */
-/*   Updated: 2024/10/30 13:09:25 by mobullad         ###   ########.fr       */
+/*   Updated: 2024/11/10 16:14:50 by mobullad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-/*#include <stdio.h>
-
-int main(void)
-{
-	char str[]="Hello\0World";
-	char *result;
-
-	result = (char *)ft_memchr(str, '\0', 11);
-	printf("%s\n", result + 1);
-	return(0);
-}*/

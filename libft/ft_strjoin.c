@@ -6,7 +6,7 @@
 /*   By: mobullad <mobullad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:57:25 by mobullad          #+#    #+#             */
-/*   Updated: 2024/11/07 12:20:07 by mobullad         ###   ########.fr       */
+/*   Updated: 2024/11/10 16:16:49 by mobullad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	tab[k] = '\0';
 	return (tab);
 }
-/*#include <stdio.h>
-
-int	main(void)
-{
-	const char *s1 = "Salut, ";
-	const char *s2 = "ca va?";
-	char *join = ft_strjoin(s1, s2);
-	printf("Joined : %s\n", join);
-	return (0);
-}*/

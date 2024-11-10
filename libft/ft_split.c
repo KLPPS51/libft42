@@ -6,14 +6,13 @@
 /*   By: mobullad <mobullad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:40:15 by mobullad          #+#    #+#             */
-/*   Updated: 2024/11/07 12:21:28 by mobullad         ###   ########.fr       */
+/*   Updated: 2024/11/10 16:14:25 by mobullad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int	ft_count_words(const char *s, char c)
+static int	ft_count_words(const char *s, char c)
 {
 	int	i;
 	int	nb;
@@ -34,70 +33,47 @@ int	ft_count_words(const char *s, char c)
 	return (nb);
 }
 
-void	*ft_free(char **str)
+int	ft_split_2(const char *s, int len, int *k, char **tab)
 {
-	unsigned long	i;
-
-	i = 0;
-	while (str[i])
+	tab[*k] = ft_substr(s, 0, len);
+	if (!tab[*k])
 	{
-		free(str[i]);
-		i++;
-	}
-	free(str);
-	return (NULL);
-}
-int	ft_split_norm(const char *s, char c, int *i, int *k, char **tab)
-{
-	int	j;
-
-	j = 0;
-	while (s[*i] && s[*i] == c)
-			(*i)++;
-		if (!s[*i])
-			return(1);
+		while (*k > 0)
 		{
-			j = *i;
-			while (s[j] && s[j] != c)
-				j++;
-			tab[*k] = ft_substr(s, *i, j - *i);
-			if (!tab[*k])
-				return(0);
-			(*k)++;
-			*i = j;
+			(*k)--;
+			free(tab[*k]);
 		}
-		return (1);
+		free(tab);
+		return (0);
+	}
+	(*k)++;
+	return (1);
 }
+
 char	**ft_split(char const *s, char c)
 {
 	char	**tab;
 	int		i;
+	int		j;
 	int		k;
 
 	if (!s)
 		return (NULL);
 	k = 0;
 	i = 0;
+	j = 0;
 	tab = malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
 	if (!tab)
 		return (NULL);
 	while (s[i])
 	{
-		if (!ft_split_norm(s, c, &i, &k, tab))
-			return (ft_free(tab));
+		while (s[i] && s[i] == c)
+			i++;
+		j = i;
+		while (s[i] && s[i] != c)
+			i++;
+		if (i != j && !ft_split_2(s + j, i - j, &k, tab))
+			return (NULL);
 	}
 	return (tab[k] = NULL, tab);
 }
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char *s = "  J'ai  faim    ";
-// 	char c = ' ';
-// 	char **dfg = ft_split(s, c);
-	
-// 	printf("%d\n", ft_count_words(s, c));
-// 	for (int i = 0; dfg[i]; i++)
-// 		printf("%s\n", dfg[i]);
-// 	return (0);
-// }

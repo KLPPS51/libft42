@@ -6,7 +6,7 @@
 /*   By: mobullad <mobullad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 13:49:21 by mobullad          #+#    #+#             */
-/*   Updated: 2024/10/30 17:31:04 by mobullad         ###   ########.fr       */
+/*   Updated: 2024/11/10 16:15:22 by mobullad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-/*#include <stdio.h>
-#include <string.h>
-
-int main (void)
-{
-	char str[]="";
-	char str2[]="789";
-
-	printf("%s\n", ft_strnstr(str, str2, 10));
-	return(0);
-}*/

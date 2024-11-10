@@ -6,7 +6,7 @@
 /*   By: mobullad <mobullad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:11:16 by mobullad          #+#    #+#             */
-/*   Updated: 2024/10/29 17:26:05 by mobullad         ###   ########.fr       */
+/*   Updated: 2024/11/10 16:15:05 by mobullad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)&s[i]);
 	return (NULL);
 }
-/*#include <stdio.h>
-
-int	main (void)
-{
-	char str[50]="Bonjour";
-	char chr[]="j";
-
-	printf("%s\n", ft_strchr(str, *chr));
-	return(0);
-}*/

@@ -6,7 +6,7 @@
 /*   By: mobullad <mobullad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:17:55 by mobullad          #+#    #+#             */
-/*   Updated: 2024/11/06 14:27:56 by mobullad         ###   ########.fr       */
+/*   Updated: 2024/11/10 16:15:31 by mobullad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(str, s + start, len + 1);
 	return (str);
 }
-/*#include <stdio.h>
-
-int	main(void)
-{
-	char *str = "Bonjour";
-	char *substr;
-
-	substr = ft_substr(str, 5, 5);
-	printf("%s\n", substr);
-	return (0);
-}*/
