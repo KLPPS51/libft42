@@ -6,13 +6,13 @@
 /*   By: mobullad <mobullad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 12:59:43 by mobullad          #+#    #+#             */
-/*   Updated: 2024/11/10 15:41:54 by mobullad         ###   ########.fr       */
+/*   Updated: 2024/11/11 16:06:03 by mobullad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	nb_len(long nb)
+static int	nb_len(long nb)
 {
 	int	len;
 
