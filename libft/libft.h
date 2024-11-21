@@ -6,7 +6,7 @@
 /*   By: mobullad <mobullad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 18:09:39 by mobullad          #+#    #+#             */
-/*   Updated: 2024/11/09 17:36:26 by mobullad         ###   ########.fr       */
+/*   Updated: 2024/11/15 15:21:58 by mobullad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <string.h>
 
 /* Fonctions standards*/
-
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);

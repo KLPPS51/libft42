@@ -6,7 +6,7 @@
 /*   By: mobullad <mobullad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:40:15 by mobullad          #+#    #+#             */
-/*   Updated: 2024/11/10 16:14:25 by mobullad         ###   ########.fr       */
+/*   Updated: 2024/11/11 16:07:00 by mobullad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static int	ft_count_words(const char *s, char c)
 	return (nb);
 }
 
-int	ft_split_2(const char *s, int len, int *k, char **tab)
+static int	ft_split_2(const char *s, int len, int *k, char **tab)
 {
 	tab[*k] = ft_substr(s, 0, len);
 	if (!tab[*k])
